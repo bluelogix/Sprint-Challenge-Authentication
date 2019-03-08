@@ -5,17 +5,17 @@ import styled from 'styled-components'
 
 
 const InputForm = styled.div `
-    width: 300px; /* this is needed */
-    height: 200px; /* this is needed */
-    padding: 10px; /* this is for styling only */
-    background: #eee; /* this is for styling only */
+    width: 300px;
+    height: 200px; 
+    padding: 10px; 
+    background: #eee; 
 
-    position: absolute; /* this is needed */
-    margin: auto; /* this is needed */
-    left: 0; /* this is needed */
-    right: 0; /* this is needed */
-    top: 0; /* this is needed */
-    bottom: 0; /* this is needed */
+    position: absolute; 
+    margin: auto; 
+    left: 0; 
+    right: 0; 
+    top: 0; 
+    bottom: 0; 
 `
 const Input = styled.input`
     display: flex;
@@ -40,7 +40,7 @@ export default class Login extends Component {
         axios.post(endpoint, this.state)
         .then(res => {
             localStorage.setItem('jwt', res.data.token);
-            // this.props.history.push('/jokes');
+            this.props.history.push('/jokes');
         })
         .catch(error => console.log(error))
     }

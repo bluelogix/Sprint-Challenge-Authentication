@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import NavBar from './navbar/NavBar'
 import Login from './auth/login'
-// import Users from './users/users'
-// import Register from './auth/register'
+import Jokes from './jokes/jokes'
+import Register from './auth/register'
 
 import './App.css';
 
@@ -14,8 +14,8 @@ class App extends Component {
        <NavBar />
        <main>
           <Route path='/login' component={Login} />
-          {/* <Route path='/users' component={Users} />
-          <Route path='/register' component={Register} /> */}
+          <Route path='/jokes' component={Jokes} />
+          <Route path='/register' component={Register} />
         </main>
       </div>
     );

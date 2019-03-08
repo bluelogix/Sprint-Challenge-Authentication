@@ -4,10 +4,6 @@ import styled from 'styled-components'
 
 
 
-
-
-
-
 function NavBar(props) {
 
 const NavBarStyle = styled.div`
