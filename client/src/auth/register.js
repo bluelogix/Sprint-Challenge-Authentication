@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const InputForm = styled.div `
     width: 300px;
-    height: 200px; 
+    height: 250px; 
     padding: 10px; 
     background: #eee; 
 
@@ -17,10 +17,27 @@ const InputForm = styled.div `
 `
 const Input = styled.input`
     display: flex;
-    margin: auto;
+    margin: 8px auto;
     flex-direction: column;
+    padding: 10px ;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid black;
+    background: #eee;
+    font-size: 20px;
+    outline: none;
 `
-
+const ButtonLog = styled.div`
+    background: #eee;
+    font-size: 20px;
+    border: 2px solid black;
+    width: 50%;
+    margin: 15px auto;
+    border-radius: 70px;
+    padding: 10px 0;
+    background: #deeaee
+  
+`
 
 export default class Register extends Component {
     state ={
@@ -47,7 +64,7 @@ export default class Register extends Component {
     render() {
         return (
             <InputForm>
-                <h2>Sign Up</h2>
+                <h2>Sign Up!</h2>
                 <form onSubmit={this.handleSubmit} autoComplete="off">
 
                     <label htmlFor='username' />
@@ -68,7 +85,7 @@ export default class Register extends Component {
                         type='password'
                         onChange={this.handleInput} />
 
-                        <button type='submit'>Sign Up</button>
+                        <ButtonLog type='submit'>Sign Up</ButtonLog>
                     
                 </form>
             </InputForm>

@@ -1,15 +1,15 @@
 import axios from 'axios'
 import React, {Component} from 'react'
 import styled from 'styled-components'
+import {NavLink} from 'react-router-dom';
 
 
 
 const InputForm = styled.div `
     width: 300px;
-    height: 200px; 
+    height: 330px; 
     padding: 10px; 
     background: #eee; 
-
     position: absolute; 
     margin: auto; 
     left: 0; 
@@ -19,8 +19,28 @@ const InputForm = styled.div `
 `
 const Input = styled.input`
     display: flex;
-    margin: auto;
+    margin: 8px auto;
     flex-direction: column;
+    padding: 10px ;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid black;
+    background: #eee;
+    font-size: 20px;
+    outline: none;
+  
+`
+
+const ButtonLog = styled.div`
+    background: #eee;
+    font-size: 20px;
+    border: 2px solid black;
+    width: 50%;
+    margin: 15px auto;
+    border-radius: 70px;
+    padding: 10px 0;
+    background: #deeaee
+  
 `
 
 export default class Login extends Component {
@@ -49,7 +69,7 @@ export default class Login extends Component {
         return (
             
            <InputForm>
-                <h2>Login</h2>
+                <h1>Login</h1>
                 
                 <form onSubmit={this.handleSubmit} autoComplete="off">
 
@@ -71,10 +91,11 @@ export default class Login extends Component {
                         type='password'
                         onChange={this.handleInput} />
 
-                        <button type='submit'>Login</button>
-                    
+                       
+                        <ButtonLog type='submit'>Login</ButtonLog> 
                 </form>
-                
+                        <h4>Don't have an account?</h4>
+                        <NavLink  style={{ color: 'purple', textDecoration: 'none' }} to='/register'>Sign up here!</NavLink>
             </InputForm>
         )
     }
